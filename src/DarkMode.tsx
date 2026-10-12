@@ -1,0 +1,25 @@
+import { useState } from "react";
+
+export default function DarkMode(){
+
+    const [mode, setMode] = useState(false);
+
+    const handleChangeColorLight = () => {
+    document.documentElement.style.setProperty('--color-bg-color', "hsl(0,0%,95%)");
+    document.documentElement.style.setProperty('--color-elem-color', "hsl(0,100%,100%)");
+    document.documentElement.style.setProperty('--color-text-color', "hsl(200,15%,8%)");
+    setMode(false);
+    };
+
+    const handleChangeColorDark = () => {
+    document.documentElement.style.setProperty('--color-bg-color', "hsl(207,26%,17%)");
+    document.documentElement.style.setProperty('--color-elem-color', "hsl(209,23%,22%)");
+    document.documentElement.style.setProperty('--color-text-color', "hsl(0,100%,100%)");
+    setMode(true);
+    };
+
+    return(
+    <>
+    {!mode ? <button className='text-sm hover:cursor-pointer' onClick={handleChangeColorDark}>🌙 Dark Mode</button> : <button className='text-sm hover:cursor-pointer' onClick={handleChangeColorLight}>☀️ Light Mode</button>}
+    </>
+)}
