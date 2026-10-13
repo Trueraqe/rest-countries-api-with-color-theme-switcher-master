@@ -1,32 +1,41 @@
-# React + TypeScript + Vite
+# Where in the world?
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A country browser built as a Frontend Mentor challenge (REST Countries API with
+color theme switcher). Browse countries, search and filter them, and view
+detailed information about each one.
 
-Currently, two official plugins are available:
+![Screenshot](./screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live demo:** https://rest-countries-api-with-color-theme-rho.vercel.app
 
-## React Compiler
+## Features
+- Browse all countries with flag, population, region and capital
+- Search countries by name
+- Filter countries by region
+- Country detail page with links to neighbouring (border) countries
+- Light / dark theme switcher
+- Responsive layout (mobile, tablet, desktop)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built with
+- React
+- TypeScript
+- Tailwind CSS
+- React Router
+- Vite
 
-## Expanding the Oxlint configuration
+## Getting started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+git clone https://github.com/Trueraqe/rest-countries-api-with-color-theme-switcher-master.git
+cd rest-countries-api-with-color-theme-switcher-master
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## What I learned
+- [A concrete problem you solved, e.g. combining search and region filtering in one place]
+- [Something about routing, e.g. building the country detail page with React Router]
+- [Something about layout, e.g. making the grid responsive with Tailwind]
+
+## Author
+[Trueraqe](https://github.com/Trueraqe)
