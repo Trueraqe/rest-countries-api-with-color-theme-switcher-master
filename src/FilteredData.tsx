@@ -16,10 +16,10 @@ export default function FilteredData({filter, country}:{
                     <Link to={"/" + c.name}><img className="rounded-t-[5px] h-full w-full" src={c.flags.png} alt={c.name}/></Link>
                 </div>
                 <div className="bg-elem-color p-5 h-[150px] w-full rounded-b-[5px]">
-                    <h5 className="font-bold pb-2">{c.name ? c.name : "NONE"}</h5>
-                    <p className="text-sm">Population: {c.population ? c.population : "NONE"}</p>
-                    <p className="text-sm">Region: {c.region ? c.region : "NONE"}</p>
-                    <p className="text-sm">Capital: {c.capital ? c.capital : "NONE"}</p>
+                    <h5 className="font-bold pb-2">{c.name ?? "NONE"}</h5>
+                    <p className="text-sm">Population: {c.population.toLocaleString("en-US") ?? "NONE"}</p>
+                    <p className="text-sm">Region: {c.region ?? "NONE"}</p>
+                    <p className="text-sm">Capital: {c.capital ??"NONE"}</p>
                 </div>
             </div>
         )}

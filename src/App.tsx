@@ -3,9 +3,12 @@ import { Routes, Route} from 'react-router-dom'
 import data from "../data.json"
 import GetCountry from './GetCountry';
 import DarkMode from './DarkMode';
+import useColor from './hooks/useColor';
 
 function App() {
 
+  useColor();
+  
   return (
     <>
     <main className='bg-bg-color h-full'>
